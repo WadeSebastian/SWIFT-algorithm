@@ -8,10 +8,3 @@
 
 import Foundation
 
-print ("hey bro.")
-print("Hello, World!")
-
-for i in 1...3 {
-    print (i)
-    print ("YEAH BRO.")
-}

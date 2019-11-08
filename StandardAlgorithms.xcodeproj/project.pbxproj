@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CD1F769B23719C5500143EA9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1F769A23719C5500143EA9 /* main.swift */; };
+		CDD5D42D237578F600222CD1 /* StandardAlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5D42C237578F600222CD1 /* StandardAlgorithmsTests.swift */; };
+		CDD5D4332375790800222CD1 /* SortingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5D4322375790800222CD1 /* SortingTest.swift */; };
+		CDD5D4352375791A00222CD1 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5D4342375791A00222CD1 /* Sorting.swift */; };
+		CDD5D4362375791A00222CD1 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5D4342375791A00222CD1 /* Sorting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +29,22 @@
 /* Begin PBXFileReference section */
 		CD1F769723719C5500143EA9 /* StandardAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StandardAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1F769A23719C5500143EA9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CDD5D42A237578F600222CD1 /* StandardAlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandardAlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDD5D42C237578F600222CD1 /* StandardAlgorithmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAlgorithmsTests.swift; sourceTree = "<group>"; };
+		CDD5D42E237578F600222CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD5D4322375790800222CD1 /* SortingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTest.swift; sourceTree = "<group>"; };
+		CDD5D4342375791A00222CD1 /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CD1F769423719C5500143EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDD5D427237578F600222CD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1F769923719C5500143EA9 /* StandardAlgorithms */,
+				CDD5D42B237578F600222CD1 /* StandardAlgorithmsTests */,
 				CD1F769823719C5500143EA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1F769723719C5500143EA9 /* StandardAlgorithms */,
+				CDD5D42A237578F600222CD1 /* StandardAlgorithmsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +76,19 @@
 			isa = PBXGroup;
 			children = (
 				CD1F769A23719C5500143EA9 /* main.swift */,
+				CDD5D4342375791A00222CD1 /* Sorting.swift */,
 			);
 			path = StandardAlgorithms;
+			sourceTree = "<group>";
+		};
+		CDD5D42B237578F600222CD1 /* StandardAlgorithmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5D42C237578F600222CD1 /* StandardAlgorithmsTests.swift */,
+				CDD5D42E237578F600222CD1 /* Info.plist */,
+				CDD5D4322375790800222CD1 /* SortingTest.swift */,
+			);
+			path = StandardAlgorithmsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +111,23 @@
 			productReference = CD1F769723719C5500143EA9 /* StandardAlgorithms */;
 			productType = "com.apple.product-type.tool";
 		};
+		CDD5D429237578F600222CD1 /* StandardAlgorithmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDD5D431237578F600222CD1 /* Build configuration list for PBXNativeTarget "StandardAlgorithmsTests" */;
+			buildPhases = (
+				CDD5D426237578F600222CD1 /* Sources */,
+				CDD5D427237578F600222CD1 /* Frameworks */,
+				CDD5D428237578F600222CD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StandardAlgorithmsTests;
+			productName = StandardAlgorithmsTests;
+			productReference = CDD5D42A237578F600222CD1 /* StandardAlgorithmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +139,9 @@
 				ORGANIZATIONNAME = "Wade, Sebastian (WING)";
 				TargetAttributes = {
 					CD1F769623719C5500143EA9 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					CDD5D429237578F600222CD1 = {
 						CreatedOnToolsVersion = 11.2;
 					};
 				};
@@ -111,16 +160,38 @@
 			projectRoot = "";
 			targets = (
 				CD1F769623719C5500143EA9 /* StandardAlgorithms */,
+				CDD5D429237578F600222CD1 /* StandardAlgorithmsTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDD5D428237578F600222CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD1F769323719C5500143EA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD5D4352375791A00222CD1 /* Sorting.swift in Sources */,
 				CD1F769B23719C5500143EA9 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDD5D426237578F600222CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD5D4362375791A00222CD1 /* Sorting.swift in Sources */,
+				CDD5D4332375790800222CD1 /* SortingTest.swift in Sources */,
+				CDD5D42D237578F600222CD1 /* StandardAlgorithmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +329,40 @@
 			};
 			name = Release;
 		};
+		CDD5D42F237578F600222CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StandardAlgorithmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.StandardAlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CDD5D430237578F600222CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StandardAlgorithmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.StandardAlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +380,15 @@
 			buildConfigurations = (
 				CD1F769F23719C5500143EA9 /* Debug */,
 				CD1F76A023719C5500143EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDD5D431237578F600222CD1 /* Build configuration list for PBXNativeTarget "StandardAlgorithmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDD5D42F237578F600222CD1 /* Debug */,
+				CDD5D430237578F600222CD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
