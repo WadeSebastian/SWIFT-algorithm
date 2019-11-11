@@ -42,7 +42,6 @@ class SortingTest: XCTestCase {
         for _ in 1...1000 {
             data.append(Int.random(in: 1...100))
         }
-        
         //act
         measure {
             sorting.bubbleSort(data: data)
@@ -51,13 +50,13 @@ class SortingTest: XCTestCase {
     
     func testMergeWithTwoSortedArraysReturnsOneSortedArray() {
         //arrange
-        let left = [1,3,5]
+        let left = [1,5,7]
         let right = [2,4,10]
         let sorting = Sorting()
         //act
         let actual = sorting.merge(left: left, right: right)
         //assert
-        XCTAssertEqual(actual, [1,2,3,4,5,10])
+        XCTAssertEqual(actual, [1,2,4,5,7,10])
     }
 
 }

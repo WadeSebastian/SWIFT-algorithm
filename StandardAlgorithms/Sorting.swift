@@ -28,17 +28,24 @@ class Sorting {
         var sortedList = [Int]()
         var lPointer: Int = 0
         var rPointer: Int = 0
+        var done = false
         while (lPointer != left.count) && (rPointer != right.count) {
-            while left[lPointer] <= right[rPointer] {
+            while (done == false) && (left[lPointer] <= right[rPointer]) {
                 sortedList.append(left[lPointer])
                 lPointer = lPointer + 1
+                if lPointer == left.count {
+                    done = true
+                }
             }
-            while right[rPointer] < left[lPointer] {
+            while (done == false) && (right[rPointer] < left[lPointer]) {
                 sortedList.append(right[rPointer])
                 rPointer = rPointer + 1
+                if rPointer == left.count {
+                done = true
+                }
             }
         } 
-        if left.count == 0 {
+            if lPointer == left.count {
             sortedList.append(contentsOf: Array(right.dropFirst(rPointer)))
         } else {
             sortedList.append(contentsOf: Array(right.dropFirst(rPointer)))
