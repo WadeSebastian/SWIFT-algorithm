@@ -9,6 +9,7 @@
 import Foundation
 
 class Sorting {
+    
     func bubbleSort(data: [Int]) -> [Int] {
         var items = data
         for _ in 0..<items.count {
@@ -51,6 +52,29 @@ class Sorting {
             let right = mergeSort(data: Array(data[midpoint..<data.count]))
             return merge(left: left, right: right)
         }
+    }
+    
+    func quickSort (data:[Int]) -> [Int] {
+      if data.count <= 1 {
+        return data
+      } else {
+        let pivot = data[0]
+        var left: [Int] = [Int]()
+        var right: [Int] = [Int]()
+        for i in 1..<data.count {
+          let item = data[i]
+          if item < pivot {
+            left.append(item)
+          } else {
+            right.append(item)
+          }
+        }
+        var sortedList: [Int] = [Int]()
+        sortedList.append(contentsOf: quickSort(data: left))
+        sortedList.append(pivot)
+        sortedList.append(contentsOf: quickSort(data: right))
+        return sortedList
+      }
     }
     
 }
