@@ -48,7 +48,7 @@ class SortingTest: XCTestCase {
         }
     }
     
-    func testMergeWithTwoSortedArraysReturnsOneSortedArray() {
+    func testMergeWithTwoSortedIntegerArraysReturnsOneSortedIntegerArray() {
         //arrange
         let left = [1,5,7]
         let right = [2,4,10]
@@ -58,5 +58,29 @@ class SortingTest: XCTestCase {
         //assert
         XCTAssertEqual(actual, [1,2,4,5,7,10])
     }
+    
+    func testMergeSortWithOneUnsortedIntegerArrayReturnsOneSortedIntegerArray() {
+        //arrange
+        let unsortedArray = [2,1,5,8,3,7,19,6]
+        let sorting = Sorting()
+        //act
+        let actual = sorting.mergeSort(data: unsortedArray)
+        //assert
+        XCTAssertEqual(actual, [1,2,3,5,6,7,8,19])
+    }
+    
+    //func testMergeSortWithMultipleUnsortedIntegerArraysReturnsSortedIntegerArrays() {
+        //arrange
+      //  let sorting = Sorting()
+        //let testCases = [(input: [10, 3, 2, 7, 1], expected: [1, 2, 3, 7, 10]),
+        //                 (input: [456, 300, 3, 1, 5, 4], expected: [1, 3, 4, 5, 300, 456])]
+        //act
+        //assert
+       // for testCase in testCases {
+            //testCase is a tuple representing the input test data and our expected output
+         //   let actual = sorting.mergeSort(data: testCase.input)
+           // XCTAssertEqual(actual, testCase.expected)
+  //      }
+  //  }
 
 }

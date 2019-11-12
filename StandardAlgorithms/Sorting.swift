@@ -23,34 +23,34 @@ class Sorting {
         
         return items
     }
-    
     func merge(left: [Int], right: [Int]) -> [Int] {
-        var sortedList = [Int]()
-        var lPointer: Int = 0
-        var rPointer: Int = 0
-        var done = false
-        while (lPointer != left.count) && (rPointer != right.count) {
-            while (done == false) && (left[lPointer] <= right[rPointer]) {
-                sortedList.append(left[lPointer])
-                lPointer = lPointer + 1
-                if lPointer == left.count {
-                    done = true
-                }
+        var mergedArray = [Int]()
+        var leftTemp = left
+        var rightTemp = right
+
+        while leftTemp.count > 0 && rightTemp.count > 0 {
+            if leftTemp[0] < rightTemp[0] {
+                mergedArray.append(leftTemp[0])
+                leftTemp.remove(at: 0)
+            } else {
+                mergedArray.append(rightTemp[0])
+                rightTemp.remove(at: 0)
             }
-            while (done == false) && (right[rPointer] < left[lPointer]) {
-                sortedList.append(right[rPointer])
-                rPointer = rPointer + 1
-                if rPointer == left.count {
-                done = true
-                }
-            }
-        } 
-            if lPointer == left.count {
-            sortedList.append(contentsOf: Array(right.dropFirst(rPointer)))
-        } else {
-            sortedList.append(contentsOf: Array(right.dropFirst(rPointer)))
         }
-        return sortedList
+        mergedArray.append(contentsOf: leftTemp)
+        mergedArray.append(contentsOf: rightTemp)
+        return mergedArray
+    }
+    
+    func mergeSort(data: [Int]) -> [Int] {
+        if data.count <= 1 {
+            return data
+        } else {
+            let midpoint = data.count / 2
+            let left = mergeSort(data: Array(data[0..<midpoint]))
+            let right = mergeSort(data: Array(data[midpoint..<data.count]))
+            return merge(left: left, right: right)
+        }
     }
     
 }
